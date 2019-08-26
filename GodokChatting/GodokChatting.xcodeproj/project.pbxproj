@@ -3,26 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */; };
+		2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FF2313801400FC3E6E /* BaseViewController.swift */; };
+		2F8B55022313806B00FC3E6E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B55012313806B00FC3E6E /* BaseView.swift */; };
+		2F8B55052313821700FC3E6E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B55042313821700FC3E6E /* UIViewExtension.swift */; };
+		2F8B55072313824C00FC3E6E /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B55062313824C00FC3E6E /* IntroView.swift */; };
+		2F8B550B231382E900FC3E6E /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B5509231382E900FC3E6E /* UIAlertControllerExtension.swift */; };
+		2F8B550C231382E900FC3E6E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B550A231382E900FC3E6E /* UIColorExtension.swift */; };
+		2F8B550E2313841400FC3E6E /* ReactiveViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B550D2313841400FC3E6E /* ReactiveViewModelType.swift */; };
+		2F8B55102313842B00FC3E6E /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B550F2313842B00FC3E6E /* IntroViewModel.swift */; };
 		F327D0302312EBC00083E537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327D02F2312EBC00083E537 /* AppDelegate.swift */; };
 		F327D0322312EBC00083E537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327D0312312EBC00083E537 /* ViewController.swift */; };
-		F327D0352312EBC00083E537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F327D0332312EBC00083E537 /* Main.storyboard */; };
 		F327D0372312EBC10083E537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F327D0362312EBC10083E537 /* Assets.xcassets */; };
 		F327D03A2312EBC10083E537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F327D0382312EBC10083E537 /* LaunchScreen.storyboard */; };
 		FE9398544281E85401D16665 /* Pods_GodokChatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		2F8B54FF2313801400FC3E6E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2F8B55012313806B00FC3E6E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2F8B55042313821700FC3E6E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		2F8B55062313824C00FC3E6E /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		2F8B5509231382E900FC3E6E /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		2F8B550A231382E900FC3E6E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		2F8B550D2313841400FC3E6E /* ReactiveViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewModelType.swift; sourceTree = "<group>"; };
+		2F8B550F2313842B00FC3E6E /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChatting.release.xcconfig"; path = "Target Support Files/Pods-GodokChatting/Pods-GodokChatting.release.xcconfig"; sourceTree = "<group>"; };
 		8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChatting.debug.xcconfig"; path = "Target Support Files/Pods-GodokChatting/Pods-GodokChatting.debug.xcconfig"; sourceTree = "<group>"; };
 		DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GodokChatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F327D02C2312EBC00083E537 /* GodokChatting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GodokChatting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F327D02F2312EBC00083E537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F327D0312312EBC00083E537 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F327D0342312EBC00083E537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F327D0362312EBC10083E537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F327D0392312EBC10083E537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F327D03B2312EBC10083E537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +56,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F8B54FA23137F6A00FC3E6E /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */,
+				2F8B550F2313842B00FC3E6E /* IntroViewModel.swift */,
+				2F8B55062313824C00FC3E6E /* IntroView.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		2F8B54FD23137FB500FC3E6E /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				F327D0362312EBC10083E537 /* Assets.xcassets */,
+				F327D0382312EBC10083E537 /* LaunchScreen.storyboard */,
+				F327D03B2312EBC10083E537 /* Info.plist */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		2F8B54FE23137FFE00FC3E6E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2F8B55032313820A00FC3E6E /* Extension */,
+				2F8B550D2313841400FC3E6E /* ReactiveViewModelType.swift */,
+				2F8B54FF2313801400FC3E6E /* BaseViewController.swift */,
+				2F8B55012313806B00FC3E6E /* BaseView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2F8B55032313820A00FC3E6E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2F8B5509231382E900FC3E6E /* UIAlertControllerExtension.swift */,
+				2F8B550A231382E900FC3E6E /* UIColorExtension.swift */,
+				2F8B55042313821700FC3E6E /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2F8B5508231382B200FC3E6E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2F8B54FA23137F6A00FC3E6E /* Intro */,
+				2F8B54FE23137FFE00FC3E6E /* Common */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		CDE5EB97E65811F3A3C47A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +120,6 @@
 				8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */,
 				7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,10 +146,8 @@
 			children = (
 				F327D02F2312EBC00083E537 /* AppDelegate.swift */,
 				F327D0312312EBC00083E537 /* ViewController.swift */,
-				F327D0332312EBC00083E537 /* Main.storyboard */,
-				F327D0362312EBC10083E537 /* Assets.xcassets */,
-				F327D0382312EBC10083E537 /* LaunchScreen.storyboard */,
-				F327D03B2312EBC10083E537 /* Info.plist */,
+				2F8B5508231382B200FC3E6E /* Source */,
+				2F8B54FD23137FB500FC3E6E /* SupportFile */,
 			);
 			path = GodokChatting;
 			sourceTree = "<group>";
@@ -151,7 +214,6 @@
 			files = (
 				F327D03A2312EBC10083E537 /* LaunchScreen.storyboard in Resources */,
 				F327D0372312EBC10083E537 /* Assets.xcassets in Resources */,
-				F327D0352312EBC00083E537 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +266,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8B55072313824C00FC3E6E /* IntroView.swift in Sources */,
+				2F8B55052313821700FC3E6E /* UIViewExtension.swift in Sources */,
+				2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */,
+				2F8B55102313842B00FC3E6E /* IntroViewModel.swift in Sources */,
+				2F8B550E2313841400FC3E6E /* ReactiveViewModelType.swift in Sources */,
+				2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */,
+				2F8B550B231382E900FC3E6E /* UIAlertControllerExtension.swift in Sources */,
+				2F8B550C231382E900FC3E6E /* UIColorExtension.swift in Sources */,
+				2F8B55022313806B00FC3E6E /* BaseView.swift in Sources */,
 				F327D0322312EBC00083E537 /* ViewController.swift in Sources */,
 				F327D0302312EBC00083E537 /* AppDelegate.swift in Sources */,
 			);
@@ -212,14 +283,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F327D0332312EBC00083E537 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F327D0342312EBC00083E537 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F327D0382312EBC10083E537 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -352,17 +415,20 @@
 			baseConfigurationReference = 8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 827YX997NH;
-				INFOPLIST_FILE = GodokChatting/Info.plist;
+				DEVELOPMENT_TEAM = 524TVTU6B9;
+				INFOPLIST_FILE = "$(SRCROOT)/GodokChatting/SupportFile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.krgoodnews.GodokChatting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,17 +437,20 @@
 			baseConfigurationReference = 7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 827YX997NH;
-				INFOPLIST_FILE = GodokChatting/Info.plist;
+				DEVELOPMENT_TEAM = 524TVTU6B9;
+				INFOPLIST_FILE = "$(SRCROOT)/GodokChatting/SupportFile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.krgoodnews.GodokChatting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
