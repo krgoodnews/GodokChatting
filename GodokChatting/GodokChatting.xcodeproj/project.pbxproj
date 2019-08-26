@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F327D0302312EBC00083E537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327D02F2312EBC00083E537 /* AppDelegate.swift */; };
+		F327D0322312EBC00083E537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327D0312312EBC00083E537 /* ViewController.swift */; };
+		F327D0352312EBC00083E537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F327D0332312EBC00083E537 /* Main.storyboard */; };
+		F327D0372312EBC10083E537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F327D0362312EBC10083E537 /* Assets.xcassets */; };
+		F327D03A2312EBC10083E537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F327D0382312EBC10083E537 /* LaunchScreen.storyboard */; };
+		FE9398544281E85401D16665 /* Pods_GodokChatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChatting.release.xcconfig"; path = "Target Support Files/Pods-GodokChatting/Pods-GodokChatting.release.xcconfig"; sourceTree = "<group>"; };
+		8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChatting.debug.xcconfig"; path = "Target Support Files/Pods-GodokChatting/Pods-GodokChatting.debug.xcconfig"; sourceTree = "<group>"; };
+		DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GodokChatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F327D02C2312EBC00083E537 /* GodokChatting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GodokChatting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F327D02F2312EBC00083E537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F327D0312312EBC00083E537 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F327D0342312EBC00083E537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F327D0362312EBC10083E537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F327D0392312EBC10083E537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F327D03B2312EBC10083E537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F327D0292312EBC00083E537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9398544281E85401D16665 /* Pods_GodokChatting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDE5EB97E65811F3A3C47A08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC2F7E4211C2240743506965 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */,
+				7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F327D0232312EBC00083E537 = {
+			isa = PBXGroup;
+			children = (
+				F327D02E2312EBC00083E537 /* GodokChatting */,
+				F327D02D2312EBC00083E537 /* Products */,
+				EC2F7E4211C2240743506965 /* Pods */,
+				CDE5EB97E65811F3A3C47A08 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F327D02D2312EBC00083E537 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F327D02C2312EBC00083E537 /* GodokChatting.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F327D02E2312EBC00083E537 /* GodokChatting */ = {
+			isa = PBXGroup;
+			children = (
+				F327D02F2312EBC00083E537 /* AppDelegate.swift */,
+				F327D0312312EBC00083E537 /* ViewController.swift */,
+				F327D0332312EBC00083E537 /* Main.storyboard */,
+				F327D0362312EBC10083E537 /* Assets.xcassets */,
+				F327D0382312EBC10083E537 /* LaunchScreen.storyboard */,
+				F327D03B2312EBC10083E537 /* Info.plist */,
+			);
+			path = GodokChatting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F327D02B2312EBC00083E537 /* GodokChatting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F327D03E2312EBC10083E537 /* Build configuration list for PBXNativeTarget "GodokChatting" */;
+			buildPhases = (
+				1299A3F3B97CCA807C384B9C /* [CP] Check Pods Manifest.lock */,
+				F327D0282312EBC00083E537 /* Sources */,
+				F327D0292312EBC00083E537 /* Frameworks */,
+				F327D02A2312EBC00083E537 /* Resources */,
+				04F9C1BF38AD83C0201DC380 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GodokChatting;
+			productName = GodokChatting;
+			productReference = F327D02C2312EBC00083E537 /* GodokChatting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F327D0242312EBC00083E537 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "국윤수";
+				TargetAttributes = {
+					F327D02B2312EBC00083E537 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = F327D0272312EBC00083E537 /* Build configuration list for PBXProject "GodokChatting" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F327D0232312EBC00083E537;
+			productRefGroup = F327D02D2312EBC00083E537 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F327D02B2312EBC00083E537 /* GodokChatting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F327D02A2312EBC00083E537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F327D03A2312EBC10083E537 /* LaunchScreen.storyboard in Resources */,
+				F327D0372312EBC10083E537 /* Assets.xcassets in Resources */,
+				F327D0352312EBC00083E537 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04F9C1BF38AD83C0201DC380 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GodokChatting/Pods-GodokChatting-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GodokChatting/Pods-GodokChatting-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GodokChatting/Pods-GodokChatting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1299A3F3B97CCA807C384B9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GodokChatting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F327D0282312EBC00083E537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F327D0322312EBC00083E537 /* ViewController.swift in Sources */,
+				F327D0302312EBC00083E537 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F327D0332312EBC00083E537 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F327D0342312EBC00083E537 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F327D0382312EBC10083E537 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F327D0392312EBC10083E537 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F327D03C2312EBC10083E537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F327D03D2312EBC10083E537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F327D03F2312EBC10083E537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827YX997NH;
+				INFOPLIST_FILE = GodokChatting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krgoodnews.GodokChatting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F327D0402312EBC10083E537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827YX997NH;
+				INFOPLIST_FILE = GodokChatting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krgoodnews.GodokChatting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F327D0272312EBC00083E537 /* Build configuration list for PBXProject "GodokChatting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F327D03C2312EBC10083E537 /* Debug */,
+				F327D03D2312EBC10083E537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F327D03E2312EBC10083E537 /* Build configuration list for PBXNativeTarget "GodokChatting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F327D03F2312EBC10083E537 /* Debug */,
+				F327D0402312EBC10083E537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F327D0242312EBC00083E537 /* Project object */;
+}
