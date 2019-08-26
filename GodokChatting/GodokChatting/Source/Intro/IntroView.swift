@@ -26,8 +26,8 @@ class IntroView: BaseView {
     override func setupUI() {
         super.setupUI()
 
-        introTitle.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        introTitle.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
     }
 
