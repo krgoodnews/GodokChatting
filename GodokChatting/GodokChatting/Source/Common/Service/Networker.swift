@@ -34,7 +34,7 @@ public enum APIResult {
     case failure(Error)
 }
 
-enum ImageType {
+public enum ImageType {
     case jpg
     case png
     case jpeg
@@ -145,7 +145,7 @@ class Networker: NSObject {
                                 imageType: imageType)
     }
 
-    static func sendRequestImage(api: Networkerable,  _ parameterEncoding: ParameterEncoding? = nil, image: UIImage, imageName: String, imageType: ImageType) -> Single<JSON> {
+    private static func sendRequestImage(api: Networkerable,  _ parameterEncoding: ParameterEncoding? = nil, image: UIImage, imageName: String, imageType: ImageType) -> Single<JSON> {
         let request = Single<JSON>.create { (single) -> Disposable in
             uploadPhoto(api.route.url.absoluteString,
                         image: image,
@@ -169,7 +169,7 @@ class Networker: NSObject {
         return request
     }
 
-    static func uploadPhoto(_ url: String, image: UIImage, imageName: String, imageType: ImageType, params: [String : Any]?, callback: ((HTTPURLResponse?, APIResult) -> Void)?) {
+    private static func uploadPhoto(_ url: String, image: UIImage, imageName: String, imageType: ImageType, params: [String : Any]?, callback: ((HTTPURLResponse?, APIResult) -> Void)?) {
 
         let httpHeaders = GodokChattingService.shared.commonHeader
         let url = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
