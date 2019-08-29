@@ -6,12 +6,12 @@
 //  Copyright © 2019 국윤수. All rights reserved.
 //
 
-import Foundation
-import RxSwift
-import RxCocoa
-import Alamofire
-import SwiftyJSON
 import UIKit
+
+import Alamofire
+import RxCocoa
+import RxSwift
+import SwiftyJSON
 
 protocol Networkerable {
     var route: (method: HTTPMethod, url: URL) { get }
@@ -34,20 +34,13 @@ public enum APIResult {
     case failure(Error)
 }
 
-public enum ImageType {
+public enum ImageType: String, CustomStringConvertible {
     case jpg
     case png
     case jpeg
 
-    var type: String {
-        switch self {
-        case .jpg:
-            return "jpg"
-        case .png:
-            return "png"
-        case .jpeg:
-            return "jpeg"
-        }
+    public var description: String {
+        return self.rawValue
     }
 }
 
@@ -194,8 +187,8 @@ class Networker: NSObject {
             }
             multiPart.append(imageFormat,
                              withName: imageName,
-                             fileName: "\(imageName).\(imageType.type)",
-                mimeType: "image/\(imageType.type)")
+                             fileName: "\(imageName).\(imageType)",
+                mimeType: "image/\(imageType)")
 
         }, to: requestURL, method: .post, headers: httpHeaders)
             .uploadProgress(queue: .main, closure: { progress in
