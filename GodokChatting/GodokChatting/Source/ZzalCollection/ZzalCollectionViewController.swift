@@ -46,10 +46,15 @@ final class ZzalCollectionViewController: BaseViewController {
       $0.edges.equalToSuperview()
     }
 
-    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"),
-                                                        style: .plain,
-                                                        target: self,
-                                                        action: #selector(didTapAddPhoto))
+    let addPhotoButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"),
+                                             style: .plain,
+                                             target: self,
+                                             action: #selector(didTapAddPhoto))
+    let refreshButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                            target: self,
+                                            action: #selector(didTapRefresh))
+
+    navigationItem.rightBarButtonItems = [addPhotoButtonItem, refreshButtonItem]
   }
 
     override func bind() {
@@ -106,6 +111,10 @@ final class ZzalCollectionViewController: BaseViewController {
     present(imagePickerController, animated: true) {
       self.view.stopWaiting()
     }
+  }
+
+  @objc private func didTapRefresh() {
+    viewModel.input.request.accept(())
   }
 }
 
