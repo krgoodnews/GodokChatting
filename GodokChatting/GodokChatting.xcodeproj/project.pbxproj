@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F012B9C231AC42D0012B7CA /* ZzalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B9B231AC42D0012B7CA /* ZzalDetailViewController.swift */; };
+		2F012B9E231AC4530012B7CA /* ZzalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B9D231AC4530012B7CA /* ZzalDetailViewModel.swift */; };
+		2F012BA0231AC7190012B7CA /* ZzalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B9F231AC7190012B7CA /* ZzalDetailView.swift */; };
 		2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */; };
 		2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FF2313801400FC3E6E /* BaseViewController.swift */; };
 		2F8B55022313806B00FC3E6E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B55012313806B00FC3E6E /* BaseView.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F012B9B231AC42D0012B7CA /* ZzalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailViewController.swift; sourceTree = "<group>"; };
+		2F012B9D231AC4530012B7CA /* ZzalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailViewModel.swift; sourceTree = "<group>"; };
+		2F012B9F231AC7190012B7CA /* ZzalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailView.swift; sourceTree = "<group>"; };
 		2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		2F8B54FF2313801400FC3E6E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2F8B55012313806B00FC3E6E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F012B9A231AC4060012B7CA /* ZzalDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2F012B9B231AC42D0012B7CA /* ZzalDetailViewController.swift */,
+				2F012B9D231AC4530012B7CA /* ZzalDetailViewModel.swift */,
+				2F012B9F231AC7190012B7CA /* ZzalDetailView.swift */,
+			);
+			path = ZzalDetail;
+			sourceTree = "<group>";
+		};
 		2F8B54FA23137F6A00FC3E6E /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +237,7 @@
 		F31DBEE9231A98C300028E1B /* ZzalCollection */ = {
 			isa = PBXGroup;
 			children = (
+				2F012B9A231AC4060012B7CA /* ZzalDetail */,
 				F31DBEEA231A98C300028E1B /* ZzalCell.swift */,
 				F31DBEEB231A98C300028E1B /* ZzalCollectionViewController.swift */,
 				F31DBEEC231A98C300028E1B /* ZzalCollectionViewModel.swift */,
@@ -376,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F012B9C231AC42D0012B7CA /* ZzalDetailViewController.swift in Sources */,
 				2F8B55072313824C00FC3E6E /* IntroView.swift in Sources */,
 				2F8B55052313821700FC3E6E /* UIViewExtension.swift in Sources */,
 				F31DBED3231A97EE00028E1B /* NSAttributedStringExtension.swift in Sources */,
@@ -387,6 +405,7 @@
 				2F8B550E2313841400FC3E6E /* ReactiveViewModelType.swift in Sources */,
 				F31DBEF4231A98C300028E1B /* ReceivedMessageCell.swift in Sources */,
 				2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */,
+				2F012BA0231AC7190012B7CA /* ZzalDetailView.swift in Sources */,
 				F31DBEFB231A98F700028E1B /* BaseCollectionCell.swift in Sources */,
 				2F8B550B231382E900FC3E6E /* UIAlertControllerExtension.swift in Sources */,
 				2F8B550C231382E900FC3E6E /* UIColorExtension.swift in Sources */,
@@ -395,6 +414,7 @@
 				F31DBEEE231A98C300028E1B /* CategoryCell.swift in Sources */,
 				F31DBEF3231A98C300028E1B /* ChatRoomViewModel.swift in Sources */,
 				F31DBEF2231A98C300028E1B /* MyMessageCell.swift in Sources */,
+				2F012B9E231AC4530012B7CA /* ZzalDetailViewModel.swift in Sources */,
 				F31DBEDD231A989D00028E1B /* UIFontExtension.swift in Sources */,
 				F327D0322312EBC00083E537 /* ViewController.swift in Sources */,
 				F31DBEF5231A98C300028E1B /* ZzalCell.swift in Sources */,

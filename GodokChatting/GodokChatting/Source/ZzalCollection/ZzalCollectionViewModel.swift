@@ -8,10 +8,40 @@
 
 import UIKit
 
-final class ZzalCollectionViewModel {
+import RxCocoa
+import RxSwift
 
-  func uploadImage(_ image: UIImage?) {
-    // TODO: Upload Image
-  }
+final class ZzalCollectionViewModel: NSObject, ReactiveViewModelType {
+
+    typealias InputType = Input
+    typealias OutputType = Output
+
+    struct Input {
+        public let selectedImg = PublishRelay<Int>()
+    }
+
+    struct Output {
+        public let moveDetailPageObservable: Observable<ZzalDetailViewController>
+    }
+
+    public lazy var input: InputType = Input()
+    public lazy var output: OutputType = {
+        let selectedImgObservable = input.selectedImg
+            .map { index -> ZzalDetailViewController in
+                let viewModel = ZzalDetailViewModel()
+                return ZzalDetailViewController(viewModel)
+        }
+        return Output(moveDetailPageObservable: selectedImgObservable)
+    }()
+    
+
+    func uploadImage(_ image: UIImage?) {
+        // TODO: Upload Image
+        
+    }
+
+    override init() {
+        super.init()
+    }
 
 }
