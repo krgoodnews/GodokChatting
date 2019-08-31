@@ -162,7 +162,7 @@ class Networker: NSObject {
         return request
     }
 
-    private static func uploadPhoto(_ url: String, image: UIImage, imageName: String, imageType: ImageType, params: [String : Any]?, callback: ((HTTPURLResponse?, APIResult) -> Void)?) {
+    private static func uploadPhoto(_ url: String, image: UIImage, imageName: String, imageType: ImageType, params: Parameters?, callback: ((HTTPURLResponse?, APIResult) -> Void)?) {
 
         let httpHeaders = GodokChattingService.shared.commonHeader
         let url = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
