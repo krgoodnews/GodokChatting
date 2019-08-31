@@ -78,7 +78,7 @@ final class CategoryListViewModel: ReactiveViewModelType {
             case .sad:
                 return UIImage(named: "sad")
             case .surprise:
-                return UIImage(named: "sad")
+                return UIImage(named: "surprise")
             }
         }
     }
