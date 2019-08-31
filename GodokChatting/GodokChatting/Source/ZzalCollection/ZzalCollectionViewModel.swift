@@ -10,6 +10,13 @@ import UIKit
 
 import RxCocoa
 import RxSwift
+import ObjectMapper
+
+enum ZzalAPIState {
+    case request
+    case complte
+    case error(Error?)
+}
 
 final class ZzalCollectionViewModel: ReactiveViewModelType {
 
@@ -17,14 +24,16 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
     typealias OutputType = Output
 
     struct Input {
-
         public let request = PublishRelay<Void>()
         public let selectedImg = PublishRelay<Int>()
     }
 
     struct Output {
         public let moveDetailPageObservable: Observable<ZzalDetailViewController>
+        public let apiState = BehaviorRelay<ZzalAPIState>(value: .request)
     }
+
+    public private(set) var model: ZzalCollectionModel?
 
     public lazy var input: InputType = Input()
     public lazy var output: OutputType = {
@@ -52,7 +61,9 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
         input.request
             .flatMap { ZzalCollectionNetworer.request(type: categoryType) }
             .subscribe(onNext: { (json) in
-                print("succ")
+                guard let json = json.dictionaryObject else { return }
+                self.model = Mapper<ZzalCollectionModel>().map(JSON: json)
+                self.output.apiState.accept(.complte)
             }, onError: { (error) in
                 print("error")
             }).disposed(by: bag)

@@ -13,6 +13,7 @@ import RxSwift
 import SnapKit
 import SwiftlyIndicator
 import Then
+import Kingfisher
 
 private let zzalCellID = "zzalCellID"
 
@@ -61,6 +62,22 @@ final class ZzalCollectionViewController: BaseViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: bag)
 
+
+        viewModel.output
+            .apiState
+            .subscribe(onNext: { [weak self] (state) in
+                guard let self = self else { return }
+                switch state {
+                case .request:
+                    self.view.startWaiting()
+                case .complte:
+                    self.view.stopWaiting()
+                    self.collectionView.reloadData()
+                case .error(let error):
+                    print()
+                }
+            }).disposed(by: bag)
+
         viewModel.input.request.accept(())
     }
 
@@ -80,12 +97,14 @@ extension ZzalCollectionViewController: UICollectionViewDelegate,
         UICollectionViewDataSource,
         UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 20
+    return viewModel.model?.imageUrls?.count ?? 0
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: zzalCellID, for: indexPath) as! ZzalCell
-    cell.backgroundColor = .yellow
+
+    cell.imageView.kf.setImage(with: URL(string: viewModel.model!.imageUrls![indexPath.row]))
+
     return cell
   }
 
