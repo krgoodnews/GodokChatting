@@ -17,7 +17,10 @@ class BaseViewController: UIViewController {
     }
 
     // setup UI
-    public func setup() { }
+    public func setup() {
+      self.navigationController?.navigationBar.isTranslucent = false
+      self.navigationController?.view.backgroundColor = .white
+  }
 
     // setup bind
     public func bind() { }
