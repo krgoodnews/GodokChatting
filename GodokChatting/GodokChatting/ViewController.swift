@@ -17,9 +17,8 @@ class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async { [weak self] in
-            guard let wself = self else { return }
-            UIApplication.shared.keyWindow?.rootViewController = wself.moveIntro()
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?.rootViewController = IntroViewController()
             UIApplication.shared.keyWindow?.makeKeyAndVisible()
         }
     }
