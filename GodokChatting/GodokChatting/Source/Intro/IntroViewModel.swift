@@ -15,11 +15,11 @@ class IntroViewModel: NSObject, ReactiveViewModelType {
     typealias OutputType = Output
 
     struct Input {
-
+      let didTapStart = PublishRelay<Void>()
     }
 
     struct Output {
-
+      let didTapObservarble = PublishRelay<UINavigationController>()
     }
 
     public lazy var input: InputType = Input()
@@ -29,6 +29,14 @@ class IntroViewModel: NSObject, ReactiveViewModelType {
 
     override init() {
         super.init()
+
+      input.didTapStart
+        .subscribe(onNext: { [weak self] (_) in
+          guard let self = self else { return }
+          let rootVC = UINavigationController(rootViewController: CategoryListViewController())
+
+          self.output.didTapObservarble.accept(rootVC)
+        }).disposed(by: bag)
     }
 
 }

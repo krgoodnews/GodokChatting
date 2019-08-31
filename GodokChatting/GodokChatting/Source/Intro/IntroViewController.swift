@@ -33,9 +33,34 @@ class IntroViewController: BaseViewController {
 
     override func bind() {
         super.bind()
-    }
+
+      introView.startBtn.rx
+        .tap
+        .map { _ in return }
+        .bind(to: viewModel.input.didTapStart)
+      .disposed(by: bag)
+
+      viewModel.output.didTapObservarble
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: { [weak self] (navi) in
+          guard let self = self else { return }
+          self.showAnimation(navi: navi)
+
+        }).disposed(by: bag)
+
+  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+}
+
+extension IntroViewController {
+  func showAnimation(navi: UINavigationController) {
+    guard let window = UIApplication.shared.keyWindow else { return }
+    UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+      window.rootViewController = navi
+    }, completion: nil)
+
+  }
 }
