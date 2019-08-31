@@ -8,13 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
-  }
+    override func setup() {
+        super.setup()
+        view.backgroundColor = .white
+    }
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?.rootViewController = IntroViewController()
+            UIApplication.shared.keyWindow?.makeKeyAndVisible()
+        }
+    }
 }
 
+private extension ViewController {
+    func moveIntro() -> IntroViewController {
+        return IntroViewController.instance()
+    }
+}
