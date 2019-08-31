@@ -92,7 +92,11 @@ final class ZzalCollectionViewController: BaseViewController {
                   self.view.startWaiting()
                 case .complete:
                   self.view.stopWaiting()
-                  self.imagePickerController.dismiss(animated: true)
+                  self.imagePickerController.dismiss(animated: true, completion: { [weak self] in
+                    guard let self = self else { return }
+
+                    self.viewModel.input.request.accept(())
+                  })
                 case .error(let error):
                   UIAlertController.alert(message: error?.localizedDescription ?? "에러 발생",
                                           defaultString: "확인").show(self)

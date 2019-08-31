@@ -30,6 +30,8 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
     typealias InputType = Input
     typealias OutputType = Output
 
+    private var delay: Int = 0
+
     struct Input {
         public let request = PublishRelay<Void>()
         public let selectedImg = PublishRelay<Int>()
@@ -70,10 +72,14 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
         self.categoryType = categoryType
 
         input.request
-            .flatMap { ZzalCollectionNetworer.request(type: categoryType) }
+            .debounce(RxTimeInterval.seconds(delay), scheduler: MainScheduler.instance)
+            .flatMap { _ -> Observable<JSON> in
+                self.output.apiState.accept(.request)
+                return ZzalCollectionNetworer.request(type: categoryType).asObservable() }
             .subscribe(onNext: { (json) in
                 guard let json = json.dictionaryObject else { return }
                 self.model = Mapper<ZzalCollectionModel>().map(JSON: json)
+                self.delay = 3
                 self.output.apiState.accept(.complete)
             }, onError: { (error) in
                 print("error")
