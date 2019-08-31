@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F012B90231A6B340012B7CA /* 12롯데마트행복Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F012B8D231A6B330012B7CA /* 12롯데마트행복Bold.ttf */; };
+		2F012B91231A6B340012B7CA /* 12롯데마트행복Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F012B8E231A6B330012B7CA /* 12롯데마트행복Light.ttf */; };
+		2F012B92231A6B340012B7CA /* 12롯데마트행복Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F012B8F231A6B340012B7CA /* 12롯데마트행복Medium.ttf */; };
+		2F012B94231A6B3F0012B7CA /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B93231A6B3F0012B7CA /* UIFontExtension.swift */; };
+		2F012B96231A80200012B7CA /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B95231A80200012B7CA /* NSAttributedStringExtension.swift */; };
 		2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */; };
 		2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FF2313801400FC3E6E /* BaseViewController.swift */; };
 		2F8B55022313806B00FC3E6E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B55012313806B00FC3E6E /* BaseView.swift */; };
@@ -16,7 +21,6 @@
 		2F8B550C231382E900FC3E6E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B550A231382E900FC3E6E /* UIColorExtension.swift */; };
 		2F8B550E2313841400FC3E6E /* ReactiveViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B550D2313841400FC3E6E /* ReactiveViewModelType.swift */; };
 		2F8B55102313842B00FC3E6E /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B550F2313842B00FC3E6E /* IntroViewModel.swift */; };
-		2FC35033231793690082F87A /* IntroAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC35032231793690082F87A /* IntroAPI.swift */; };
 		2FC350352317A1550082F87A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2FC350342317A1550082F87A /* README.md */; };
 		2FEE3E282314C21900CAFBB5 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3E272314C21900CAFBB5 /* Networker.swift */; };
 		F327D0302312EBC00083E537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327D02F2312EBC00083E537 /* AppDelegate.swift */; };
@@ -27,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F012B8D231A6B330012B7CA /* 12롯데마트행복Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12롯데마트행복Bold.ttf"; sourceTree = "<group>"; };
+		2F012B8E231A6B330012B7CA /* 12롯데마트행복Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12롯데마트행복Light.ttf"; sourceTree = "<group>"; };
+		2F012B8F231A6B340012B7CA /* 12롯데마트행복Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12롯데마트행복Medium.ttf"; sourceTree = "<group>"; };
+		2F012B93231A6B3F0012B7CA /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		2F012B95231A80200012B7CA /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		2F8B54FF2313801400FC3E6E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2F8B55012313806B00FC3E6E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -36,7 +45,6 @@
 		2F8B550A231382E900FC3E6E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		2F8B550D2313841400FC3E6E /* ReactiveViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewModelType.swift; sourceTree = "<group>"; };
 		2F8B550F2313842B00FC3E6E /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
-		2FC35032231793690082F87A /* IntroAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroAPI.swift; sourceTree = "<group>"; };
 		2FC350342317A1550082F87A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2FEE3E272314C21900CAFBB5 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChatting.release.xcconfig"; path = "Target Support Files/Pods-GodokChatting/Pods-GodokChatting.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F012B8C231A6A9B0012B7CA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2F012B8D231A6B330012B7CA /* 12롯데마트행복Bold.ttf */,
+				2F012B8E231A6B330012B7CA /* 12롯데마트행복Light.ttf */,
+				2F012B8F231A6B340012B7CA /* 12롯데마트행복Medium.ttf */,
+				2F012B93231A6B3F0012B7CA /* UIFontExtension.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		2F8B54FA23137F6A00FC3E6E /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +116,11 @@
 		2F8B55032313820A00FC3E6E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2F012B8C231A6A9B0012B7CA /* Font */,
 				2F8B5509231382E900FC3E6E /* UIAlertControllerExtension.swift */,
 				2F8B550A231382E900FC3E6E /* UIColorExtension.swift */,
 				2F8B55042313821700FC3E6E /* UIViewExtension.swift */,
+				2F012B95231A80200012B7CA /* NSAttributedStringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -113,19 +134,10 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		2FC350312317935C0082F87A /* API */ = {
-			isa = PBXGroup;
-			children = (
-				2FC35032231793690082F87A /* IntroAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		2FEE3E262314C20E00CAFBB5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				2FC350342317A1550082F87A /* README.md */,
-				2FC350312317935C0082F87A /* API */,
 				2FEE3E272314C21900CAFBB5 /* Networker.swift */,
 			);
 			path = Service;
@@ -237,7 +249,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F012B90231A6B340012B7CA /* 12롯데마트행복Bold.ttf in Resources */,
 				2FC350352317A1550082F87A /* README.md in Resources */,
+				2F012B92231A6B340012B7CA /* 12롯데마트행복Medium.ttf in Resources */,
+				2F012B91231A6B340012B7CA /* 12롯데마트행복Light.ttf in Resources */,
 				F327D03A2312EBC10083E537 /* LaunchScreen.storyboard in Resources */,
 				F327D0372312EBC10083E537 /* Assets.xcassets in Resources */,
 			);
@@ -293,18 +308,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F8B55072313824C00FC3E6E /* IntroView.swift in Sources */,
-				2FC35033231793690082F87A /* IntroAPI.swift in Sources */,
 				2F8B55052313821700FC3E6E /* UIViewExtension.swift in Sources */,
 				2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */,
 				2F8B55102313842B00FC3E6E /* IntroViewModel.swift in Sources */,
 				2F8B550E2313841400FC3E6E /* ReactiveViewModelType.swift in Sources */,
 				2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */,
 				2F8B550B231382E900FC3E6E /* UIAlertControllerExtension.swift in Sources */,
+				2F012B96231A80200012B7CA /* NSAttributedStringExtension.swift in Sources */,
 				2F8B550C231382E900FC3E6E /* UIColorExtension.swift in Sources */,
 				2F8B55022313806B00FC3E6E /* BaseView.swift in Sources */,
 				F327D0322312EBC00083E537 /* ViewController.swift in Sources */,
 				F327D0302312EBC00083E537 /* AppDelegate.swift in Sources */,
 				2FEE3E282314C21900CAFBB5 /* Networker.swift in Sources */,
+				2F012B94231A6B3F0012B7CA /* UIFontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

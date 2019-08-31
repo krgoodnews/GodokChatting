@@ -33,26 +33,6 @@ class IntroViewController: BaseViewController {
 
     override func bind() {
         super.bind()
-
-        viewModel.output.introState
-            .subscribe(onNext: { [weak self] (state) in
-                guard let self = self else { return }
-                switch state {
-                case .requesting:
-                    self.view.startWaiting()
-                case .complete:
-                    self.view.stopWaiting()
-                case .error(let error):
-                    self.view.stopWaiting()
-
-                    UIAlertController.alert(message: "\(error?.localizedDescription ?? "장애!")",
-                        cancelString: "확인")
-                    .show(self)
-                }
-            }).disposed(by: bag)
-
-        // bind가 끝나고 request 요청
-        viewModel.input.request.accept(())
     }
 
     override func viewDidLoad() {
