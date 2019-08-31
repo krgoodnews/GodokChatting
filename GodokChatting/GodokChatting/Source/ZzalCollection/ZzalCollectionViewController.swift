@@ -23,7 +23,7 @@ final class ZzalCollectionViewController: BaseViewController {
     private let bag = DisposeBag()
 
   lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-    $0.backgroundColor = .gray
+    $0.backgroundColor = .groupTableViewBackground
     $0.delegate = self
     $0.dataSource = self
     $0.register(ZzalCell.self, forCellWithReuseIdentifier: zzalCellID)
@@ -35,6 +35,7 @@ final class ZzalCollectionViewController: BaseViewController {
     convenience init( _ viewModel: ZzalCollectionViewModel) {
         self.init()
         self.viewModel = viewModel
+        self.title = viewModel.categoryType.title
     }
 
   override func setup() {
@@ -70,7 +71,7 @@ final class ZzalCollectionViewController: BaseViewController {
                 switch state {
                 case .request:
                     self.view.startWaiting()
-                case .complte:
+                case .complete:
                     self.view.stopWaiting()
                     self.collectionView.reloadData()
                 case .error(let error):
@@ -78,15 +79,30 @@ final class ZzalCollectionViewController: BaseViewController {
                 }
             }).disposed(by: bag)
 
+      viewModel.output.uploadImageState
+              .subscribe(onNext: { [weak self] (state) in
+                guard let self = self else { return }
+                switch state {
+                case .request:
+                  self.view.startWaiting()
+                case .complete:
+                  self.view.stopWaiting()
+                  self.imagePickerController.dismiss(animated: true)
+                case .error(let error):
+                  UIAlertController.alert(message: error?.localizedDescription ?? "에러 발생",
+                                          defaultString: "확인").show(self)
+                }
+              }).disposed(by: bag)
         viewModel.input.request.accept(())
     }
 
+  lazy var imagePickerController = UIImagePickerController().then {
+    $0.delegate = self
+    $0.modalTransitionStyle = .crossDissolve
+  }
+
   @objc private func didTapAddPhoto() {
     view.startWaiting()
-    let imagePickerController = UIImagePickerController().then {
-      $0.delegate = self
-      $0.modalTransitionStyle = .crossDissolve
-    }
     present(imagePickerController, animated: true) {
       self.view.stopWaiting()
     }
@@ -119,9 +135,8 @@ extension ZzalCollectionViewController: UICollectionViewDelegate,
 
 extension ZzalCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-    let image = (info[.originalImage] as? UIImage)
-    viewModel.uploadImage(image)
-    dismiss(animated: true)
+    guard let image = (info[.originalImage] as? UIImage) else { return }
+    viewModel.input.uploadRequest.accept(image)
   }
 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

@@ -10,6 +10,7 @@ import Foundation
 
 class ZzalDetailViewModel: ReactiveViewModelType {
 
+
     typealias InputType = Input
     typealias OutputType = Output
 
@@ -22,5 +23,9 @@ class ZzalDetailViewModel: ReactiveViewModelType {
     public lazy var input: InputType = Input()
     public lazy var output: OutputType = Output()
 
+  public let imageURL: String?
 
+  init(_ imageURL: String?) {
+    self.imageURL = imageURL
+  }
 }

@@ -30,6 +30,10 @@ final class CategoryListViewController: BaseViewController {
 
   override func setup() {
     super.setup()
+
+    navigationItem.titleView = UIImageView(image: UIImage(named: "titleImage")).then {
+      $0.contentMode = .scaleAspectFill
+    }
     view.addSubviews(collectionView)
 
     collectionView.snp.makeConstraints {
@@ -94,9 +98,6 @@ extension CategoryListViewController: UICollectionViewDelegate, UICollectionView
   }
 
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    let zzalCollectionVC = ZzalCollectionViewController()
-//    navigationController?.pushViewController(zzalCollectionVC, animated: true)
-//    viewModel.didSelectCategory(at: indexPath)
     viewModel.input.didSelectedItem.accept((indexPath.section, indexPath.row))
   }
 

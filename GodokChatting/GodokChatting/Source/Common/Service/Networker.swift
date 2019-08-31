@@ -186,7 +186,7 @@ class Networker: NSObject {
                 return
             }
             multiPart.append(imageFormat,
-                             withName: imageName,
+                             withName: "imageData",
                              fileName: "\(imageName).\(imageType)",
                 mimeType: "image/\(imageType)")
 
@@ -236,6 +236,7 @@ public class GodokChattingService: NSObject {
 
     public var commonHeader: HTTPHeaders {
         var headers = HTTPHeaders()
+        headers["Content-Type"] = "multipart/form-data"
         return headers
     }
 
