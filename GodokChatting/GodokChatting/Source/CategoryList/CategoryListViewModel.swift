@@ -33,7 +33,7 @@ final class CategoryListViewModel: ReactiveViewModelType {
         var itmes: [ItemTypes] {
             switch self {
             case .emotional:
-                return [.joy, .anger, .love, .pain, .sad, .surprise]
+                return [.joy, .angry, .love, .pain, .sad, .surprise]
             case .person:
                 return []
             }
@@ -42,7 +42,7 @@ final class CategoryListViewModel: ReactiveViewModelType {
 
     enum ItemTypes: Int {
         case joy = 0
-        case anger
+        case angry
         case love
         case pain
         case sad
@@ -52,7 +52,7 @@ final class CategoryListViewModel: ReactiveViewModelType {
             switch self {
             case .joy:
                 return "즐거움"
-            case .anger:
+            case .angry:
                 return "노여움"
             case .love:
                 return "사랑"
@@ -68,7 +68,7 @@ final class CategoryListViewModel: ReactiveViewModelType {
         var parameterString: String {
             switch self {
             case .joy: return "funny"
-            case .anger: return "angry"
+            case .angry: return "angry"
             case .love: return "love"
             case .pain: return "pain"
             case .sad: return "sad"
@@ -80,7 +80,7 @@ final class CategoryListViewModel: ReactiveViewModelType {
             switch self {
             case .joy:
                 return UIImage(named: "joy")
-            case .anger:
+            case .angry:
                 return UIImage(named: "anger")
             case .love:
                 return UIImage(named: "love")

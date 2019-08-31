@@ -23,7 +23,7 @@ final class ZzalCollectionViewController: BaseViewController {
     private let bag = DisposeBag()
 
   lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-    $0.backgroundColor = .gray
+    $0.backgroundColor = .groupTableViewBackground
     $0.delegate = self
     $0.dataSource = self
     $0.register(ZzalCell.self, forCellWithReuseIdentifier: zzalCellID)
@@ -120,9 +120,8 @@ extension ZzalCollectionViewController: UICollectionViewDelegate,
 
 extension ZzalCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-    let image = (info[.originalImage] as? UIImage)
-    viewModel.uploadImage(image)
-    dismiss(animated: true)
+    guard let image = (info[.originalImage] as? UIImage) else { return }
+    viewModel.input.uploadRequest.accept(image)
   }
 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

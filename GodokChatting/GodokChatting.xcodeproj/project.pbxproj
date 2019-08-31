@@ -48,6 +48,7 @@
 		F327D0322312EBC00083E537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327D0312312EBC00083E537 /* ViewController.swift */; };
 		F327D0372312EBC10083E537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F327D0362312EBC10083E537 /* Assets.xcassets */; };
 		F327D03A2312EBC10083E537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F327D0382312EBC10083E537 /* LaunchScreen.storyboard */; };
+		F3863606231B0186000B91CA /* ZzalUploadAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3863605231B0186000B91CA /* ZzalUploadAPI.swift */; };
 		FE9398544281E85401D16665 /* Pods_GodokChatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		F327D0362312EBC10083E537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F327D0392312EBC10083E537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F327D03B2312EBC10083E537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3863605231B0186000B91CA /* ZzalUploadAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalUploadAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				2F012BA6231AE9540012B7CA /* ZzalCollectionAPI.swift */,
 				2F012BA8231AEE060012B7CA /* ZzalCollectionModel.swift */,
+				F3863605231B0186000B91CA /* ZzalUploadAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				2F012BA2231ADB610012B7CA /* CategroyListEmotional.swift in Sources */,
 				F31DBEDD231A989D00028E1B /* UIFontExtension.swift in Sources */,
 				F327D0322312EBC00083E537 /* ViewController.swift in Sources */,
+				F3863606231B0186000B91CA /* ZzalUploadAPI.swift in Sources */,
 				F31DBEF5231A98C300028E1B /* ZzalCell.swift in Sources */,
 				F31DBEFD231A98F700028E1B /* Bindable.swift in Sources */,
 				F327D0302312EBC00083E537 /* AppDelegate.swift in Sources */,

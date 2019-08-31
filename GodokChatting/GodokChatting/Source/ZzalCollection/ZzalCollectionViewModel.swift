@@ -11,6 +11,13 @@ import UIKit
 import RxCocoa
 import RxSwift
 import ObjectMapper
+import SwiftyJSON
+
+enum UploadAPIState {
+  case request
+  case complete
+  case error(Error?)
+}
 
 enum ZzalAPIState {
     case request
@@ -26,11 +33,14 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
     struct Input {
         public let request = PublishRelay<Void>()
         public let selectedImg = PublishRelay<Int>()
+
+        public let uploadRequest = PublishRelay<UIImage>()
     }
 
     struct Output {
         public let moveDetailPageObservable: Observable<ZzalDetailViewController>
         public let apiState = BehaviorRelay<ZzalAPIState>(value: .request)
+      public let uploadImageState = PublishRelay<UploadAPIState>()
     }
 
     public private(set) var model: ZzalCollectionModel?
@@ -68,5 +78,25 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
             }, onError: { (error) in
                 print("error")
             }).disposed(by: bag)
+
+      input.uploadRequest
+        .map { image -> UIImage in
+          return image
+        }.flatMap { (image) -> Observable<JSON> in
+          self.output.uploadImageState.accept(.request)
+          return ZzalUploadNetworker.upload(type: self.categoryType, image: image).asObservable()
+        }.subscribe(onNext: { [weak self] (json) in
+          guard let self = self else { return }
+          print("성공")
+          self.output.apiState.accept(.complete)
+          }, onError: { [weak self] (error) in
+            guard let self = self else { return }
+            print("error : \(error.localizedDescription)")
+            self.output.apiState.accept(.error(error))
+        }).disposed(by: bag)
     }
+
+  private func upload(image: UIImage) {
+
+  }
 }

@@ -14,7 +14,7 @@ import Then
 class ZzalDetailView: BaseView {
 
     let imageView = UIImageView().then {
-        $0.backgroundColor = .yellow
+        $0.backgroundColor = .groupTableViewBackground
         $0.contentMode = .scaleAspectFit
     }
 
