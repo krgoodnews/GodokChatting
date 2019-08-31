@@ -40,7 +40,7 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
     struct Output {
         public let moveDetailPageObservable: Observable<ZzalDetailViewController>
         public let apiState = BehaviorRelay<ZzalAPIState>(value: .request)
-      public let uploadImageState = PublishRelay<UploadAPIState>()
+      public let uploadImageState = BehaviorRelay<UploadAPIState>(value: .request)
     }
 
     public private(set) var model: ZzalCollectionModel?
@@ -88,11 +88,11 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
         }.subscribe(onNext: { [weak self] (json) in
           guard let self = self else { return }
           print("성공")
-          self.output.apiState.accept(.complete)
+          self.output.uploadImageState.accept(.complete)
           }, onError: { [weak self] (error) in
             guard let self = self else { return }
             print("error : \(error.localizedDescription)")
-            self.output.apiState.accept(.error(error))
+            self.output.uploadImageState.accept(.error(error))
         }).disposed(by: bag)
     }
 
