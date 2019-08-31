@@ -11,6 +11,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import SnapKit
+import SwiftlyIndicator
 import Then
 
 private let zzalCellID = "zzalCellID"
@@ -38,7 +39,10 @@ final class ZzalCollectionViewController: BaseViewController {
       $0.edges.equalToSuperview()
     }
 
-    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"), style: .plain, target: self, action: #selector(didTapAddPhoto))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"),
+                                                        style: .plain,
+                                                        target: self,
+                                                        action: #selector(didTapAddPhoto))
   }
 
     override func bind() {
@@ -54,9 +58,14 @@ final class ZzalCollectionViewController: BaseViewController {
     }
 
   @objc private func didTapAddPhoto() {
-    let imagePickerController = UIImagePickerController()
-    imagePickerController.delegate = self
-    present(imagePickerController, animated: true)
+    view.startWaiting()
+    let imagePickerController = UIImagePickerController().then {
+      $0.delegate = self
+      $0.modalTransitionStyle = .crossDissolve
+    }
+    present(imagePickerController, animated: true) {
+      self.view.stopWaiting()
+    }
   }
 }
 
