@@ -10,6 +10,9 @@
 		2F012B9C231AC42D0012B7CA /* ZzalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B9B231AC42D0012B7CA /* ZzalDetailViewController.swift */; };
 		2F012B9E231AC4530012B7CA /* ZzalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B9D231AC4530012B7CA /* ZzalDetailViewModel.swift */; };
 		2F012BA0231AC7190012B7CA /* ZzalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012B9F231AC7190012B7CA /* ZzalDetailView.swift */; };
+		2F012BA2231ADB610012B7CA /* CategroyListEmotional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012BA1231ADB610012B7CA /* CategroyListEmotional.swift */; };
+		2F012BA4231ADE300012B7CA /* CategroyListPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012BA3231ADE300012B7CA /* CategroyListPerson.swift */; };
+		2F012BA7231AE9540012B7CA /* ZzalCollectionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012BA6231AE9540012B7CA /* ZzalCollectionAPI.swift */; };
 		2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */; };
 		2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FF2313801400FC3E6E /* BaseViewController.swift */; };
 		2F8B55022313806B00FC3E6E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B55012313806B00FC3E6E /* BaseView.swift */; };
@@ -51,6 +54,9 @@
 		2F012B9B231AC42D0012B7CA /* ZzalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailViewController.swift; sourceTree = "<group>"; };
 		2F012B9D231AC4530012B7CA /* ZzalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailViewModel.swift; sourceTree = "<group>"; };
 		2F012B9F231AC7190012B7CA /* ZzalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailView.swift; sourceTree = "<group>"; };
+		2F012BA1231ADB610012B7CA /* CategroyListEmotional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroyListEmotional.swift; sourceTree = "<group>"; };
+		2F012BA3231ADE300012B7CA /* CategroyListPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroyListPerson.swift; sourceTree = "<group>"; };
+		2F012BA6231AE9540012B7CA /* ZzalCollectionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalCollectionAPI.swift; sourceTree = "<group>"; };
 		2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		2F8B54FF2313801400FC3E6E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2F8B55012313806B00FC3E6E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -112,6 +118,14 @@
 				2F012B9F231AC7190012B7CA /* ZzalDetailView.swift */,
 			);
 			path = ZzalDetail;
+			sourceTree = "<group>";
+		};
+		2F012BA5231AE9430012B7CA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2F012BA6231AE9540012B7CA /* ZzalCollectionAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		2F8B54FA23137F6A00FC3E6E /* Intro */ = {
@@ -176,6 +190,7 @@
 		2FEE3E262314C20E00CAFBB5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2F012BA5231AE9430012B7CA /* API */,
 				2FC350342317A1550082F87A /* README.md */,
 				2FEE3E272314C21900CAFBB5 /* Networker.swift */,
 			);
@@ -216,6 +231,8 @@
 				F31DBEE0231A98C300028E1B /* CategoryListViewController.swift */,
 				F31DBEE1231A98C300028E1B /* CategoryCell.swift */,
 				F31DBEE2231A98C300028E1B /* CategoryListViewModel.swift */,
+				2F012BA1231ADB610012B7CA /* CategroyListEmotional.swift */,
+				2F012BA3231ADE300012B7CA /* CategroyListPerson.swift */,
 			);
 			name = CategoryList;
 			path = GodokChatting/Source/CategoryList;
@@ -397,6 +414,7 @@
 				2F8B55072313824C00FC3E6E /* IntroView.swift in Sources */,
 				2F8B55052313821700FC3E6E /* UIViewExtension.swift in Sources */,
 				F31DBED3231A97EE00028E1B /* NSAttributedStringExtension.swift in Sources */,
+				2F012BA4231ADE300012B7CA /* CategroyListPerson.swift in Sources */,
 				2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */,
 				F31DBEFC231A98F700028E1B /* BaseTableViewCell.swift in Sources */,
 				F31DBEF1231A98C300028E1B /* ChatRoomViewController.swift in Sources */,
@@ -415,6 +433,7 @@
 				F31DBEF3231A98C300028E1B /* ChatRoomViewModel.swift in Sources */,
 				F31DBEF2231A98C300028E1B /* MyMessageCell.swift in Sources */,
 				2F012B9E231AC4530012B7CA /* ZzalDetailViewModel.swift in Sources */,
+				2F012BA2231ADB610012B7CA /* CategroyListEmotional.swift in Sources */,
 				F31DBEDD231A989D00028E1B /* UIFontExtension.swift in Sources */,
 				F327D0322312EBC00083E537 /* ViewController.swift in Sources */,
 				F31DBEF5231A98C300028E1B /* ZzalCell.swift in Sources */,
@@ -424,6 +443,7 @@
 				F31DBEF6231A98C300028E1B /* ZzalCollectionViewController.swift in Sources */,
 				2FEE3E282314C21900CAFBB5 /* Networker.swift in Sources */,
 				F31DBEF0231A98C300028E1B /* ChatModel.swift in Sources */,
+				2F012BA7231AE9540012B7CA /* ZzalCollectionAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

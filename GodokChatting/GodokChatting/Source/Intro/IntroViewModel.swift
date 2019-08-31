@@ -34,7 +34,6 @@ class IntroViewModel: NSObject, ReactiveViewModelType {
         .subscribe(onNext: { [weak self] (_) in
           guard let self = self else { return }
           let rootVC = UINavigationController(rootViewController: CategoryListViewController())
-
           self.output.didTapObservarble.accept(rootVC)
         }).disposed(by: bag)
     }

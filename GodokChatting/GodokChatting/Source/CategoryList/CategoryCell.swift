@@ -22,6 +22,7 @@ final class CategoryCell: BaseCollectionCell {
     $0.layer.cornerRadius = CategoryCell.size().width / 2
     $0.layer.borderWidth = 1
     $0.layer.borderColor = UIColor.init(r: 151, g: 151, b: 151).cgColor
+    $0.clipsToBounds = true
   }
 
   let titleLabel = UILabel().then {
@@ -45,4 +46,9 @@ final class CategoryCell: BaseCollectionCell {
       $0.left.right.equalToSuperview()
     }
   }
+
+    public func bind(type: CategoryListViewModel.ItemTypes) {
+        titleLabel.text = type.title
+        imageView.image = type.image
+    }
 }

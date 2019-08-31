@@ -240,7 +240,7 @@ public class GodokChattingService: NSObject {
     }
 
     private var apiHost: String {
-        return ""
+        return "kbz247owj4.execute-api.ap-northeast-2.amazonaws.com"
     }
 
     public var apiURL: URL {

@@ -11,12 +11,14 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class ZzalCollectionViewModel: NSObject, ReactiveViewModelType {
+final class ZzalCollectionViewModel: ReactiveViewModelType {
 
     typealias InputType = Input
     typealias OutputType = Output
 
     struct Input {
+
+        public let request = PublishRelay<Void>()
         public let selectedImg = PublishRelay<Int>()
     }
 
@@ -33,15 +35,26 @@ final class ZzalCollectionViewModel: NSObject, ReactiveViewModelType {
         }
         return Output(moveDetailPageObservable: selectedImgObservable)
     }()
-    
+
+    private let categoryType: CategoryListViewModel.ItemTypes!
+    private let bag = DisposeBag()
+
 
     func uploadImage(_ image: UIImage?) {
         // TODO: Upload Image
         
     }
 
-    override init() {
-        super.init()
-    }
 
+    init(categoryType: CategoryListViewModel.ItemTypes) {
+        self.categoryType = categoryType
+
+        input.request
+            .flatMap { ZzalCollectionNetworer.request(type: categoryType) }
+            .subscribe(onNext: { (json) in
+                print("succ")
+            }, onError: { (error) in
+                print("error")
+            }).disposed(by: bag)
+    }
 }

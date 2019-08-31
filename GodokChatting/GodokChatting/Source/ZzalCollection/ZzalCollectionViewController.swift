@@ -18,7 +18,7 @@ private let zzalCellID = "zzalCellID"
 
 final class ZzalCollectionViewController: BaseViewController {
 
-  let viewModel = ZzalCollectionViewModel()
+    private var viewModel: ZzalCollectionViewModel!
     private let bag = DisposeBag()
 
   lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
@@ -30,6 +30,11 @@ final class ZzalCollectionViewController: BaseViewController {
     layout?.minimumInteritemSpacing = 0
     layout?.minimumLineSpacing = 1
   }
+
+    convenience init( _ viewModel: ZzalCollectionViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
 
   override func setup() {
     super.setup()
@@ -55,6 +60,8 @@ final class ZzalCollectionViewController: BaseViewController {
                 guard let self = self else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: bag)
+
+        viewModel.input.request.accept(())
     }
 
   @objc private func didTapAddPhoto() {
