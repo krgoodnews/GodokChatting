@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>사진 저장을 위한 권한이 필요합니다.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>12롯데마트행복Bold.ttf</string>

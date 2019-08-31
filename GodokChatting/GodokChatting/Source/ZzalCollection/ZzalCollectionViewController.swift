@@ -13,16 +13,17 @@ import RxSwift
 import SnapKit
 import SwiftlyIndicator
 import Then
+import Kingfisher
 
 private let zzalCellID = "zzalCellID"
 
 final class ZzalCollectionViewController: BaseViewController {
 
-  let viewModel = ZzalCollectionViewModel()
+    private var viewModel: ZzalCollectionViewModel!
     private let bag = DisposeBag()
 
   lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-    $0.backgroundColor = .gray
+    $0.backgroundColor = .groupTableViewBackground
     $0.delegate = self
     $0.dataSource = self
     $0.register(ZzalCell.self, forCellWithReuseIdentifier: zzalCellID)
@@ -30,6 +31,12 @@ final class ZzalCollectionViewController: BaseViewController {
     layout?.minimumInteritemSpacing = 0
     layout?.minimumLineSpacing = 1
   }
+
+    convenience init( _ viewModel: ZzalCollectionViewModel) {
+        self.init()
+        self.viewModel = viewModel
+        self.title = viewModel.categoryType.title
+    }
 
   override func setup() {
     super.setup()
@@ -55,14 +62,47 @@ final class ZzalCollectionViewController: BaseViewController {
                 guard let self = self else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: bag)
+
+
+        viewModel.output
+            .apiState
+            .subscribe(onNext: { [weak self] (state) in
+                guard let self = self else { return }
+                switch state {
+                case .request:
+                    self.view.startWaiting()
+                case .complete:
+                    self.view.stopWaiting()
+                    self.collectionView.reloadData()
+                case .error(let error):
+                    print()
+                }
+            }).disposed(by: bag)
+
+      viewModel.output.uploadImageState
+              .subscribe(onNext: { [weak self] (state) in
+                guard let self = self else { return }
+                switch state {
+                case .request:
+                  self.view.startWaiting()
+                case .complete:
+                  self.view.stopWaiting()
+                  self.imagePickerController.dismiss(animated: true)
+                case .error(let error):
+                  UIAlertController.alert(message: error?.localizedDescription ?? "에러 발생",
+                                          defaultString: "확인").show(self)
+                }
+              }).disposed(by: bag)
+        viewModel.input.request.accept(())
     }
+
+  lazy var imagePickerController = UIImagePickerController().then {
+    $0.delegate = self
+    $0.modalTransitionStyle = .crossDissolve
+  }
 
   @objc private func didTapAddPhoto() {
     view.startWaiting()
-    let imagePickerController = UIImagePickerController().then {
-      $0.delegate = self
-      $0.modalTransitionStyle = .crossDissolve
-    }
     present(imagePickerController, animated: true) {
       self.view.stopWaiting()
     }
@@ -73,12 +113,14 @@ extension ZzalCollectionViewController: UICollectionViewDelegate,
         UICollectionViewDataSource,
         UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 20
+    return viewModel.model?.imageUrls?.count ?? 0
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: zzalCellID, for: indexPath) as! ZzalCell
-    cell.backgroundColor = .yellow
+
+    cell.imageView.kf.setImage(with: URL(string: viewModel.model!.imageUrls![indexPath.row]))
+
     return cell
   }
 
@@ -93,9 +135,8 @@ extension ZzalCollectionViewController: UICollectionViewDelegate,
 
 extension ZzalCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-    let image = (info[.originalImage] as? UIImage)
-    viewModel.uploadImage(image)
-    dismiss(animated: true)
+    guard let image = (info[.originalImage] as? UIImage) else { return }
+    viewModel.input.uploadRequest.accept(image)
   }
 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
