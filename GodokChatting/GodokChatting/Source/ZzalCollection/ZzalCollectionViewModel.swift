@@ -39,7 +39,8 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
     public lazy var output: OutputType = {
         let selectedImgObservable = input.selectedImg
             .map { index -> ZzalDetailViewController in
-                let viewModel = ZzalDetailViewModel()
+                let imgURL = self.model?.imageUrls?[index]
+                let viewModel = ZzalDetailViewModel(imgURL)
                 return ZzalDetailViewController(viewModel)
         }
         return Output(moveDetailPageObservable: selectedImgObservable)

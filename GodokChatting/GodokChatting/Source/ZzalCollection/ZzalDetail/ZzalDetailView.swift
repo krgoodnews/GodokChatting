@@ -6,12 +6,25 @@
 //  Copyright © 2019 국윤수. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+import SnapKit
+import Then
 
 class ZzalDetailView: BaseView {
 
+    let imageView = UIImageView().then {
+        $0.backgroundColor = .yellow
+        $0.contentMode = .scaleAspectFit
+    }
+
     override func setup() {
         super.setup()
+
+        addSubviews(imageView)
+        imageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 
     override func setupUI() {
