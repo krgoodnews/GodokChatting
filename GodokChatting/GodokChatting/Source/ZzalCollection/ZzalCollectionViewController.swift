@@ -35,6 +35,7 @@ final class ZzalCollectionViewController: BaseViewController {
     convenience init( _ viewModel: ZzalCollectionViewModel) {
         self.init()
         self.viewModel = viewModel
+        self.title = viewModel.categoryType.title
     }
 
   override func setup() {
@@ -70,7 +71,7 @@ final class ZzalCollectionViewController: BaseViewController {
                 switch state {
                 case .request:
                     self.view.startWaiting()
-                case .complte:
+                case .complete:
                     self.view.stopWaiting()
                     self.collectionView.reloadData()
                 case .error(let error):

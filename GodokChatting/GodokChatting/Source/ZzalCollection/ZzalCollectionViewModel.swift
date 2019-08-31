@@ -14,7 +14,7 @@ import ObjectMapper
 
 enum ZzalAPIState {
     case request
-    case complte
+    case complete
     case error(Error?)
 }
 
@@ -45,7 +45,7 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
         return Output(moveDetailPageObservable: selectedImgObservable)
     }()
 
-    private let categoryType: CategoryListViewModel.ItemTypes!
+    let categoryType: CategoryListViewModel.ItemTypes!
     private let bag = DisposeBag()
 
 
@@ -63,7 +63,7 @@ final class ZzalCollectionViewModel: ReactiveViewModelType {
             .subscribe(onNext: { (json) in
                 guard let json = json.dictionaryObject else { return }
                 self.model = Mapper<ZzalCollectionModel>().map(JSON: json)
-                self.output.apiState.accept(.complte)
+                self.output.apiState.accept(.complete)
             }, onError: { (error) in
                 print("error")
             }).disposed(by: bag)

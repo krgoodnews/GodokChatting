@@ -67,9 +67,9 @@ public extension UIAlertController {
 
     // sheet
     @discardableResult
-    static func sheet( _ title: String = "", messgae: String) -> UIAlertController {
+    static func sheet( _ title: String = "", message: String) -> UIAlertController {
         return UIAlertController(title: title,
-                                 message: messgae,
+                                 message: message,
                                  preferredStyle: .actionSheet)
     }
 

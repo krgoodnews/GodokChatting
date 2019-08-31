@@ -65,6 +65,17 @@ final class CategoryListViewModel: ReactiveViewModelType {
             }
         }
 
+        var parameterString: String {
+            switch self {
+            case .joy: return "funny"
+            case .anger: return "angry"
+            case .love: return "love"
+            case .pain: return "pain"
+            case .sad: return "sad"
+            case .surprise: return "surprise"
+            }
+        }
+
         var image: UIImage? {
             switch self {
             case .joy:

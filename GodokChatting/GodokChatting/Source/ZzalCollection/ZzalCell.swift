@@ -18,8 +18,8 @@ final class ZzalCell: BaseCollectionCell {
   // MARK: - View
 
   let imageView = UIImageView().then {
+    $0.clipsToBounds = true
     $0.contentMode = .scaleAspectFill
-    $0.backgroundColor = UIColor.cyan.withAlphaComponent(0.2)
   }
 
   override func setupView() {
