@@ -55,14 +55,14 @@ final class CategoryListViewController: BaseViewController {
 
 extension CategoryListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 1
+    return 2
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     guard let section = CategoryListViewModel.SectionType.init(rawValue: section) else {
         return 0
     }
-    return section.itmes.count
+    return section.items.count
   }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -93,7 +93,7 @@ extension CategoryListViewController: UICollectionViewDelegate, UICollectionView
 
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoryCellID, for: indexPath) as! CategoryCell
 
-    cell.bind(type: section.itmes[indexPath.row])
+    cell.bind(type: section.items[indexPath.row])
     return cell
   }
 
