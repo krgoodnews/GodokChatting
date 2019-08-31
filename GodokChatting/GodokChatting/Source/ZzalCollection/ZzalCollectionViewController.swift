@@ -8,7 +8,10 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
 import SnapKit
+import SwiftlyIndicator
 import Then
 
 private let zzalCellID = "zzalCellID"
@@ -16,6 +19,7 @@ private let zzalCellID = "zzalCellID"
 final class ZzalCollectionViewController: BaseViewController {
 
   let viewModel = ZzalCollectionViewModel()
+    private let bag = DisposeBag()
 
   lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
     $0.backgroundColor = .gray
@@ -35,13 +39,33 @@ final class ZzalCollectionViewController: BaseViewController {
       $0.edges.equalToSuperview()
     }
 
-    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"), style: .plain, target: self, action: #selector(didTapAddPhoto))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"),
+                                                        style: .plain,
+                                                        target: self,
+                                                        action: #selector(didTapAddPhoto))
   }
 
+    override func bind() {
+        super.bind()
+
+        viewModel.output
+            .moveDetailPageObservable
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (vc) in
+                guard let self = self else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: bag)
+    }
+
   @objc private func didTapAddPhoto() {
-    let imagePickerController = UIImagePickerController()
-    imagePickerController.delegate = self
-    present(imagePickerController, animated: true)
+    view.startWaiting()
+    let imagePickerController = UIImagePickerController().then {
+      $0.delegate = self
+      $0.modalTransitionStyle = .crossDissolve
+    }
+    present(imagePickerController, animated: true) {
+      self.view.stopWaiting()
+    }
   }
 }
 
@@ -61,6 +85,10 @@ extension ZzalCollectionViewController: UICollectionViewDelegate,
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return ZzalCell.size()
   }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.input.selectedImg.accept(indexPath.item)
+    }
 }
 
 extension ZzalCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
