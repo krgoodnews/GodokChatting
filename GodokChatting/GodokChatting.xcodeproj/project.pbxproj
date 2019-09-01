@@ -14,6 +14,7 @@
 		2F012BA4231ADE300012B7CA /* CategroyListPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012BA3231ADE300012B7CA /* CategroyListPerson.swift */; };
 		2F012BA7231AE9540012B7CA /* ZzalCollectionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012BA6231AE9540012B7CA /* ZzalCollectionAPI.swift */; };
 		2F012BA9231AEE060012B7CA /* ZzalCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012BA8231AEE060012B7CA /* ZzalCollectionModel.swift */; };
+		2F012BB1231B45BD0012B7CA /* GodokChattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F012BB0231B45BD0012B7CA /* GodokChattingTests.swift */; };
 		2F8B54FC23137F7700FC3E6E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */; };
 		2F8B55002313801400FC3E6E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B54FF2313801400FC3E6E /* BaseViewController.swift */; };
 		2F8B55022313806B00FC3E6E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B55012313806B00FC3E6E /* BaseView.swift */; };
@@ -25,6 +26,7 @@
 		2F8B55102313842B00FC3E6E /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B550F2313842B00FC3E6E /* IntroViewModel.swift */; };
 		2FC350352317A1550082F87A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2FC350342317A1550082F87A /* README.md */; };
 		2FEE3E282314C21900CAFBB5 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3E272314C21900CAFBB5 /* Networker.swift */; };
+		9021D3C130C3D9ABAFD8DEA3 /* Pods_GodokChattingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF5ED00D7F01A1C2AB352A7 /* Pods_GodokChattingTests.framework */; };
 		F31DBED3231A97EE00028E1B /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31DBED2231A97EE00028E1B /* NSAttributedStringExtension.swift */; };
 		F31DBEDB231A989D00028E1B /* 12롯데마트행복Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F31DBED7231A989D00028E1B /* 12롯데마트행복Light.ttf */; };
 		F31DBEDC231A989D00028E1B /* 12롯데마트행복Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F31DBED8231A989D00028E1B /* 12롯데마트행복Bold.ttf */; };
@@ -52,7 +54,18 @@
 		FE9398544281E85401D16665 /* Pods_GodokChatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2F012BB3231B45BD0012B7CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F327D0242312EBC00083E537 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F327D02B2312EBC00083E537;
+			remoteInfo = GodokChatting;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1D34CB11C633CA9F8780D61E /* Pods-GodokChattingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChattingTests.debug.xcconfig"; path = "Target Support Files/Pods-GodokChattingTests/Pods-GodokChattingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F012B9B231AC42D0012B7CA /* ZzalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailViewController.swift; sourceTree = "<group>"; };
 		2F012B9D231AC4530012B7CA /* ZzalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailViewModel.swift; sourceTree = "<group>"; };
 		2F012B9F231AC7190012B7CA /* ZzalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalDetailView.swift; sourceTree = "<group>"; };
@@ -60,6 +73,10 @@
 		2F012BA3231ADE300012B7CA /* CategroyListPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroyListPerson.swift; sourceTree = "<group>"; };
 		2F012BA6231AE9540012B7CA /* ZzalCollectionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalCollectionAPI.swift; sourceTree = "<group>"; };
 		2F012BA8231AEE060012B7CA /* ZzalCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalCollectionModel.swift; sourceTree = "<group>"; };
+		2F012BAE231B45BD0012B7CA /* GodokChattingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GodokChattingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F012BB0231B45BD0012B7CA /* GodokChattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodokChattingTests.swift; sourceTree = "<group>"; };
+		2F012BB2231B45BD0012B7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F012BB8231B483C0012B7CA /* ZzalDemoJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ZzalDemoJSON.json; sourceTree = "<group>"; };
 		2F8B54FB23137F7700FC3E6E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		2F8B54FF2313801400FC3E6E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2F8B55012313806B00FC3E6E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -74,6 +91,7 @@
 		7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChatting.release.xcconfig"; path = "Target Support Files/Pods-GodokChatting/Pods-GodokChatting.release.xcconfig"; sourceTree = "<group>"; };
 		8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChatting.debug.xcconfig"; path = "Target Support Files/Pods-GodokChatting/Pods-GodokChatting.debug.xcconfig"; sourceTree = "<group>"; };
 		DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GodokChatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF5ED00D7F01A1C2AB352A7 /* Pods_GodokChattingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GodokChattingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31DBED2231A97EE00028E1B /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		F31DBED7231A989D00028E1B /* 12롯데마트행복Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12롯데마트행복Light.ttf"; sourceTree = "<group>"; };
 		F31DBED8231A989D00028E1B /* 12롯데마트행복Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12롯데마트행복Bold.ttf"; sourceTree = "<group>"; };
@@ -100,9 +118,18 @@
 		F327D0392312EBC10083E537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F327D03B2312EBC10083E537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3863605231B0186000B91CA /* ZzalUploadAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZzalUploadAPI.swift; sourceTree = "<group>"; };
+		F62371E4046FB0A65FBB46E3 /* Pods-GodokChattingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodokChattingTests.release.xcconfig"; path = "Target Support Files/Pods-GodokChattingTests/Pods-GodokChattingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2F012BAB231B45BD0012B7CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9021D3C130C3D9ABAFD8DEA3 /* Pods_GodokChattingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F327D0292312EBC00083E537 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +159,16 @@
 				F3863605231B0186000B91CA /* ZzalUploadAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		2F012BAF231B45BD0012B7CA /* GodokChattingTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F012BB0231B45BD0012B7CA /* GodokChattingTests.swift */,
+				2F012BB2231B45BD0012B7CA /* Info.plist */,
+				2F012BB8231B483C0012B7CA /* ZzalDemoJSON.json */,
+			);
+			path = GodokChattingTests;
 			sourceTree = "<group>";
 		};
 		2F8B54FA23137F6A00FC3E6E /* Intro */ = {
@@ -207,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				DB56B3A8D4BF8E6CE221143F /* Pods_GodokChatting.framework */,
+				ECF5ED00D7F01A1C2AB352A7 /* Pods_GodokChattingTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,6 +254,8 @@
 			children = (
 				8DEDA30FC379584F84C33F52 /* Pods-GodokChatting.debug.xcconfig */,
 				7DB2C7580EE819A2B6587406 /* Pods-GodokChatting.release.xcconfig */,
+				1D34CB11C633CA9F8780D61E /* Pods-GodokChattingTests.debug.xcconfig */,
+				F62371E4046FB0A65FBB46E3 /* Pods-GodokChattingTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -273,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				F327D02E2312EBC00083E537 /* GodokChatting */,
+				2F012BAF231B45BD0012B7CA /* GodokChattingTests */,
 				F327D02D2312EBC00083E537 /* Products */,
 				EC2F7E4211C2240743506965 /* Pods */,
 				CDE5EB97E65811F3A3C47A08 /* Frameworks */,
@@ -283,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				F327D02C2312EBC00083E537 /* GodokChatting.app */,
+				2F012BAE231B45BD0012B7CA /* GodokChattingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,6 +343,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2F012BAD231B45BD0012B7CA /* GodokChattingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F012BB7231B45BD0012B7CA /* Build configuration list for PBXNativeTarget "GodokChattingTests" */;
+			buildPhases = (
+				874E9C6C4A481D2ED941937F /* [CP] Check Pods Manifest.lock */,
+				2F012BAA231B45BD0012B7CA /* Sources */,
+				2F012BAB231B45BD0012B7CA /* Frameworks */,
+				2F012BAC231B45BD0012B7CA /* Resources */,
+				A83BB6C79C4A217C8B038211 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F012BB4231B45BD0012B7CA /* PBXTargetDependency */,
+			);
+			name = GodokChattingTests;
+			productName = GodokChattingTests;
+			productReference = 2F012BAE231B45BD0012B7CA /* GodokChattingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F327D02B2312EBC00083E537 /* GodokChatting */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F327D03E2312EBC10083E537 /* Build configuration list for PBXNativeTarget "GodokChatting" */;
@@ -326,10 +388,14 @@
 		F327D0242312EBC00083E537 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "국윤수";
 				TargetAttributes = {
+					2F012BAD231B45BD0012B7CA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F327D02B2312EBC00083E537;
+					};
 					F327D02B2312EBC00083E537 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -349,11 +415,19 @@
 			projectRoot = "";
 			targets = (
 				F327D02B2312EBC00083E537 /* GodokChatting */,
+				2F012BAD231B45BD0012B7CA /* GodokChattingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2F012BAC231B45BD0012B7CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F327D02A2312EBC00083E537 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,9 +483,56 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		874E9C6C4A481D2ED941937F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GodokChattingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A83BB6C79C4A217C8B038211 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GodokChattingTests/Pods-GodokChattingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GodokChattingTests/Pods-GodokChattingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GodokChattingTests/Pods-GodokChattingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2F012BAA231B45BD0012B7CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F012BB1231B45BD0012B7CA /* GodokChattingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F327D0282312EBC00083E537 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,6 +578,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2F012BB4231B45BD0012B7CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F327D02B2312EBC00083E537 /* GodokChatting */;
+			targetProxy = 2F012BB3231B45BD0012B7CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F327D0382312EBC10083E537 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -469,6 +598,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2F012BB5231B45BD0012B7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D34CB11C633CA9F8780D61E /* Pods-GodokChattingTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 524TVTU6B9;
+				INFOPLIST_FILE = GodokChattingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linsaeng.GodokChattingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GodokChatting.app/GodokChatting";
+			};
+			name = Debug;
+		};
+		2F012BB6231B45BD0012B7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62371E4046FB0A65FBB46E3 /* Pods-GodokChattingTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 524TVTU6B9;
+				INFOPLIST_FILE = GodokChattingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linsaeng.GodokChattingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GodokChatting.app/GodokChatting";
+			};
+			name = Release;
+		};
 		F327D03C2312EBC10083E537 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -632,6 +805,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2F012BB7231B45BD0012B7CA /* Build configuration list for PBXNativeTarget "GodokChattingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F012BB5231B45BD0012B7CA /* Debug */,
+				2F012BB6231B45BD0012B7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F327D0272312EBC00083E537 /* Build configuration list for PBXProject "GodokChatting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

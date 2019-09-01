@@ -16,4 +16,10 @@ target 'GodokChatting' do
   pod 'SwiftyJSON', '4.2.0'
   pod 'ObjectMapper', '3.4.2'
 
+  target 'GodokChattingTests' do
+    inherit! :search_paths
+    pod 'RxBlocking', '~> 5'
+    pod 'RxTest', '~> 5'
+  end
+
 end
