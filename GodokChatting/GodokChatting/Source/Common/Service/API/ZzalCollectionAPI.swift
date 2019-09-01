@@ -26,7 +26,6 @@ extension ZzalCollectionAPI: Networkerable {
         var params = Parameters()
         switch self {
         case .collection(let type):
-//            params["type"] = "surprise"
             params["type"] = type.parameterString
             return params
         }

@@ -46,10 +46,15 @@ final class ZzalCollectionViewController: BaseViewController {
       $0.edges.equalToSuperview()
     }
 
-    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"),
-                                                        style: .plain,
-                                                        target: self,
-                                                        action: #selector(didTapAddPhoto))
+    let addPhotoButtonItem = UIBarButtonItem(image: UIImage(named: "addPhoto"),
+                                             style: .plain,
+                                             target: self,
+                                             action: #selector(didTapAddPhoto))
+    let refreshButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                            target: self,
+                                            action: #selector(didTapRefresh))
+
+    navigationItem.rightBarButtonItems = [addPhotoButtonItem, refreshButtonItem]
   }
 
     override func bind() {
@@ -87,7 +92,11 @@ final class ZzalCollectionViewController: BaseViewController {
                   self.view.startWaiting()
                 case .complete:
                   self.view.stopWaiting()
-                  self.imagePickerController.dismiss(animated: true)
+                  self.imagePickerController.dismiss(animated: true, completion: { [weak self] in
+                    guard let self = self else { return }
+
+                    self.viewModel.input.request.accept(())
+                  })
                 case .error(let error):
                   UIAlertController.alert(message: error?.localizedDescription ?? "에러 발생",
                                           defaultString: "확인").show(self)
@@ -106,6 +115,10 @@ final class ZzalCollectionViewController: BaseViewController {
     present(imagePickerController, animated: true) {
       self.view.stopWaiting()
     }
+  }
+
+  @objc private func didTapRefresh() {
+    viewModel.input.request.accept(())
   }
 }
 
